@@ -2,11 +2,10 @@
 #include "esp_log.h"
 #include "esp_wifi.h"
 #include "freertos/event_groups.h"
+#include "secrets.h"
 
 static const char *TAG = "WiFi";
 
-#define WIFI_SSID "ssid"
-#define WIFI_PASSWORD "password"
 #define WIFI_CONNECTED_BIT BIT0
 
 static EventGroupHandle_t wifi_event_group;

@@ -8,13 +8,11 @@
 #include "mbedtls/entropy.h"
 #include "mbedtls/pk.h"
 #include "crypto.h"
+#include "secrets.h"
 
 static const char *TAG = "CRYPTO";
 
-// Use ECDSA with P-256 curve for smaller signatures
-const char *private_key_pem = "-----BEGIN EC PRIVATE KEY-----\n"
-                             "<your-EC-private-key>\n"
-                             "-----END EC PRIVATE KEY-----";
+
 
 secure_payload_t create_signed_payload(void) {
     secure_payload_t payload = {0};
